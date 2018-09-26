@@ -1,5 +1,5 @@
-# fibos-todomvc
-Todo apps for FIBOS blockchain by React and fibos.js
+# FIBOS TodoMVC
+Todo DApp for FIBOS blockchain by React and fibos.js
 
 ## Installation
 
