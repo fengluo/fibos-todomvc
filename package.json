@@ -7,7 +7,7 @@
   "author": "",
   "license": "MIT",
   "scripts": {
-    "start:dapp": "node build/server.js",
+    "start:dapp": "node scripts/server.js",
     "start:fibos": "fibos start_fibos/node.js",
     "deploy:contract": "fibos scripts/deploy.js"
   },
