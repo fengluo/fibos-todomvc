@@ -28,7 +28,6 @@
     "babel-loader": "^8.0.2",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "css-loader": "^1.0.0",
-    "dotenv": "^6.0.0",
     "koa": "^2.5.3",
     "koa-bodyparser": "^4.2.1",
     "koa-static": "^5.0.0",
