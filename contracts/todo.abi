@@ -1,0 +1,64 @@
+{
+    "version": "eosio::abi/1.0",
+    "structs": [
+        {
+            "name": "todo_index",
+            "base": "",
+            "fields": [
+                {
+                    "name": "id",
+                    "type": "int32"
+                }
+            ]
+        },
+        {
+            "name": "todo",
+            "base" : "",
+            "fields": [
+                {
+                    "name": "id",
+                    "type": "int32"
+                },
+                {
+                    "name": "text",
+                    "type": "string"
+                },
+                {
+                    "name": "completed",
+                    "type": "bool"
+                }
+            ]
+        }
+    ],
+    "actions": [
+        {
+            "name": "emplace",
+            "type": "todo",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "find",
+            "type": "todo_index",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "update",
+            "type": "todo",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "destory",
+            "type": "todo_index",
+            "ricardian_contract": ""
+        }
+    ],
+    "tables": [
+        {
+            "name": "todos",
+            "type": "todo",
+            "index_type": "i64",
+            "key_names": ["id"],
+            "key_types": ["int64"]
+        }
+    ]
+}

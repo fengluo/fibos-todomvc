@@ -1,0 +1,40 @@
+{
+  "name": "todolist-fibos-client",
+  "version": "1.0.0",
+  "description": "",
+  "repository": "",
+  "keywords": "",
+  "author": "",
+  "license": "MIT",
+  "scripts": {
+    "start:dapp": "node build/server.js",
+    "start:fibos": "fibos start_fibos/node.js",
+    "deploy:contract": "fibos scripts/deploy.js"
+  },
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "fibos.js": "^0.3.1",
+    "prop-types": "^15.6.2",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "todomvc-app-css": "^2.1.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
+    "@babel/plugin-transform-arrow-functions": "^7.0.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.2",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "css-loader": "^1.0.0",
+    "dotenv": "^6.0.0",
+    "koa": "^2.5.3",
+    "koa-bodyparser": "^4.2.1",
+    "koa-static": "^5.0.0",
+    "koa-webpack": "^3.0.2",
+    "style-loader": "^0.23.0",
+    "webpack": "^4.19.1",
+    "webpack-cli": "^3.1.1"
+  }
+}
