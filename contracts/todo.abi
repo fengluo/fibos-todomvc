@@ -7,7 +7,7 @@
             "fields": [
                 {
                     "name": "id",
-                    "type": "int32"
+                    "type": "int64"
                 }
             ]
         },
@@ -17,7 +17,7 @@
             "fields": [
                 {
                     "name": "id",
-                    "type": "int32"
+                    "type": "int64"
                 },
                 {
                     "name": "text",
