@@ -36,22 +36,24 @@ class App extends Component {
         this.setState({todos: data.rows})
       }).catch((e) => {
         console.error(e)
-      })
+      }
+    )
   }
 
   addTodo = (text) => {
+    const todo_id = this.state.todos.reduce((maxId, todo) => Math.max(todo.id, maxId), -1) + 1
     fibosClient.contract(config.contract.name).then((contract) => {
       contract.emplace(
         {
-            text,
-            id: this.state.todos.reduce((maxId, todo) => Math.max(todo.id, maxId), -1) + 1,
-            completed: 0
+          id: todo_id,
+          text,
+          completed: 0
         },
         { authorization: [config.contract.sender] }
       ).then((res) => {
         const todos = [
           {
-            id: this.state.todos.reduce((maxId, todo) => Math.max(todo.id, maxId), -1) + 1,
+            id: todo_id,
             completed: 0,
             text: text
           },
