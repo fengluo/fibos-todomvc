@@ -9,7 +9,8 @@
   "scripts": {
     "start:dapp": "node scripts/server.js",
     "start:fibos": "fibos start_fibos/node.js",
-    "deploy:contract": "fibos scripts/deploy.js"
+    "deploy:contract": "fibos scripts/deploy.js",
+    "clean:fibos": "rm -rf start_fibos/fibos_data_dir"
   },
   "dependencies": {
     "classnames": "^2.2.6",
