@@ -10,7 +10,7 @@ exports.emplace = (id, text, completed) => {
 }
 exports.find = (id) => {
     var todos = db.todos(action.account, action.account);
-    console.log(todos.find(id))
+    console.log(todos.get(id))
 };
 exports.update = (id, text, completed) => {
     var todos = db.todos(action.account, action.account);
