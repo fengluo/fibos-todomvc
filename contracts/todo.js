@@ -1,5 +1,5 @@
 // create 似乎是个关键词
-exports.emplace = (id, text, completed) => {
+exports.emplacetodo = (id, text, completed) => {
     var todos = db.todos(action.account, action.account);
     todos.emplace(action.account, {
         text,
@@ -8,25 +8,21 @@ exports.emplace = (id, text, completed) => {
     });
     console.log('todo#', id, ' created');
 }
-exports.find = (id) => {
+exports.findtodo = (id) => {
     var todos = db.todos(action.account, action.account);
-    console.log(todos.get(id))
+    console.log(todos.find(id))
 };
-exports.update = (id, text, completed) => {
+exports.updatetodo = (id, text, completed) => {
     var todos = db.todos(action.account, action.account);
-    todos.modify(
-        id,
-        action.account,
-        {
-            text,
-            completed,
-            id
-        }
-    );
+    var itr = todos.find(id);
+    itr.data.text = text;
+    itr.data.completed = completed;
+    itr.update(action.account);
     console.log('todos#', id, ' updated');
 }
-exports.destory = (id) => {
+exports.destorytodo = (id) => {
     var todos = db.todos(action.account, action.account);
-    todos.erase(id);
+    var itr = todos.find(id);
+    itr.remove();
     console.log('todos#', id, ' removed');
 }
