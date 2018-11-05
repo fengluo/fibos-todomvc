@@ -8,6 +8,10 @@ const config = {
         name: 'todo',
         sender: 'todo'
     },
+    testContract:{
+        name: 'testtodo',
+        sender: 'testtodo'
+    },
     account: {
         publicKey: process.env.PUBLIC_KEY || 'FO6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV',
         privateKey: process.env.PRIVATE_KEY || '5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3'
