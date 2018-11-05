@@ -32,22 +32,22 @@
     ],
     "actions": [
         {
-            "name": "emplace",
+            "name": "emplacetodo",
             "type": "todo",
             "ricardian_contract": ""
         },
         {
-            "name": "find",
+            "name": "findtodo",
             "type": "todo_index",
             "ricardian_contract": ""
         },
         {
-            "name": "update",
+            "name": "updatetodo",
             "type": "todo",
             "ricardian_contract": ""
         },
         {
-            "name": "destory",
+            "name": "destorytodo",
             "type": "todo_index",
             "ricardian_contract": ""
         }
