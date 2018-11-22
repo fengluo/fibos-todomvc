@@ -43,7 +43,7 @@ class App extends Component {
   addTodo = (text) => {
     const todo_id = this.state.todos.reduce((maxId, todo) => Math.max(todo.id, maxId), -1) + 1
     fibosClient.contract(config.contract.name).then((contract) => {
-      contract.emplace(
+      contract.emplacetodo(
         {
           id: todo_id,
           text,
@@ -68,7 +68,7 @@ class App extends Component {
 
   deleteTodo = (id) => {
     fibosClient.contract(config.contract.name).then((contract) => {
-      contract.destory(
+      contract.destorytodo(
         {
           id
         },
@@ -89,7 +89,7 @@ class App extends Component {
       return
     }
     fibosClient.contract(config.contract.name).then((contract) => {
-      contract.update(
+      contract.updatetodo(
         {
           id: id,
           text,
@@ -113,7 +113,7 @@ class App extends Component {
       return
     }
     fibosClient.contract(config.contract.name).then((contract) => {
-      contract.update(
+      contract.updatetodo(
         {
           id: id,
           text: todo_item.text,
