@@ -19,7 +19,7 @@ try {
 }
 
 // setcode
-const jsCode = fs.readTextFile('../contracts/todo.js');
+const jsCode = fs.readTextFile(`${__dirname}/../contracts/todo.js`);
 fibosClient.setcodeSync(config.contract.name, 0, 0, fibosClient.compileCode(jsCode));
 
 // getcode
@@ -27,5 +27,5 @@ const code = fibosClient.getCodeSync(config.contract.name, true);
 console.log('code:', code);
 
 // setabi
-const abi = JSON.parse(fs.readTextFile('../contracts/todo.abi'));
+const abi = JSON.parse(fs.readTextFile(`${__dirname}/../contracts/todo.abi`));
 fibosClient.setabiSync(config.contract.name, abi);
